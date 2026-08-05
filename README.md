@@ -27,7 +27,7 @@ En esta tarea se configuró una máquina virtual con Ubuntu Server 26.04 LTS en 
 Una vez configuradas ambas IPs en la misma subred, se ejecutó el ping desde la maquina virtual hacia el equipo anfitrión para comprobar la conectividad.
 
 ```bash
-ping X.X.X.X -c 4
+ping 192.168.5.206 -c 4
 ```
 
 ![Resultado del ping](screenshots/ping-result.png)
@@ -36,5 +36,5 @@ ping X.X.X.X -c 4
 
 ## Resumen de IPs
 
-* Host (Windows): 
-* Servidor virtual (Ubuntu Server): 
+* Host (Windows): 192.168.5.206
+* Servidor virtual (Ubuntu Server): 192.168.5.31

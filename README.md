@@ -36,7 +36,7 @@ sudo zerotier-cli join f3797ba7a869532b
 
 Los cuatro dispositivos fueron autorizados desde ZeroTier Central y se les asignaron IPs estáticas dentro de la subred `10.41.113.0/24`.
 
-![Dispositivos autorizados en ZeroTier Central](screenshots/zerotier-members.png)
+![Dispositivos autorizados en ZeroTier Central](screenshots/zerotier-members.jpeg)
 
 ---
 
@@ -50,7 +50,7 @@ echo "net.ipv4.ip_forward=1" | sudo tee -a /etc/sysctl.conf
 sudo sysctl -p
 ```
 
-![IP Forwarding habilitado en ROUTER](screenshots/router-ip-forward.png)
+![IP Forwarding habilitado en ROUTER](screenshots/router-ip-forward.jpeg)
 
 ---
 
@@ -77,9 +77,9 @@ traceroute 10.41.113.3
 traceroute 10.41.113.4
 ```
 
-![Ping nodo1 a ROUTER](screenshots/ping-nodo1-router.png)
+![Ping nodo1 a ROUTER](screenshots/ping-nodo1-router.jpeg)
 
-![Pings y traceroute desde nodo1](screenshots/ping-traceroute-nodo1.png)
+![Pings y traceroute desde nodo1](screenshots/ping-traceroute-nodo1.jpeg)
 
 ---
 
@@ -92,11 +92,11 @@ ping -c 4 10.41.113.4
 traceroute 10.41.113.1
 ```
 
-![Ping nodo2 a ROUTER](screenshots/ping-nodo2-router.png)
+![Ping nodo2 a ROUTER](screenshots/ping-nodo2-router.jpeg)
 
-![Pings desde nodo2](screenshots/ping-nodo2.png)
+![Pings desde nodo2](screenshots/ping-nodo2.jpeg)
 
-![Traceroute desde nodo2](screenshots/traceroute-nodo2.png)
+![Traceroute desde nodo2](screenshots/traceroute-nodo2.jpeg)
 
 ---
 
@@ -109,7 +109,7 @@ ping -c 4 10.41.113.3
 traceroute 10.41.113.1
 ```
 
-![Traceroute desde nodo3](screenshots/traceroute-nodo3.png)
+![Traceroute desde nodo3](screenshots/traceroute-nodo3.jpeg)
 
 ---
 

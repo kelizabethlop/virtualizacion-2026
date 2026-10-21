@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: hello
+  namespace: argocd-kela
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/kelizabethlop/virtualizacion-2026.git
+    targetRevision: assessment-06
+    path: parcial/apps/hello
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: parcial-kela
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true

@@ -1,0 +1,29 @@
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
+metadata:
+  name: grafana
+  namespace: monitoring-kela
+spec:
+  entryPoints:
+    - web
+  routes:
+  - kind: Rule
+    match: Host(`grafana.kela.com`)
+    services:
+    - name: grafana
+      port: 3000
+---
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
+metadata:
+  name: prometheus
+  namespace: monitoring-kela
+spec:
+  entryPoints:
+    - web
+  routes:
+  - kind: Rule
+    match: Host(`prometheus.kela.com`)
+    services:
+    - name: prometheus
+      port: 9090
